@@ -17,16 +17,16 @@
 
         .widget {
             padding: 5px 5px ;
-            color: #6b5037;
+            color: #3e2b1d;
             display: flex;
             justify-content:center;
             align-items:center;
             flex-direction: column;
             max-width: 95%;
             margin: auto;
-            border: 3px solid #6b5037;
+            border: 3px solid #281604;
             border-radius: 5px;
-            box-shadow: 2px 2px 1px 0px #453424;
+            box-shadow: 2px 2px 1px 0px #887060;
 
         }
 
@@ -108,8 +108,8 @@ function dispalyGreetings(today){
 ];
 
         var dayName = days[today.getDay()];
-        var monthName = monthNames[today.getMonth()];
         var date = today.getDate();
+        var monthName = monthNames[today.getMonth()];
         var year = today.getFullYear();
         document.getElementById('date').innerHTML =dayName+", "+monthName+" "+date+" "+year;
 
