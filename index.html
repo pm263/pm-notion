@@ -111,7 +111,7 @@ function dispalyGreetings(today){
         var date = today.getDate();
         var monthName = monthNames[today.getMonth()];
         var year = today.getFullYear();
-        document.getElementById('date').innerHTML =dayName+", "+monthName+" "+date+" "+year;
+        document.getElementById('date').innerHTML =dayName+", "+date+" "+monthName+" "+year;
 
     }
 
@@ -123,7 +123,7 @@ function dispalyGreetings(today){
     document.getElementById('hour').innerHTML = padZeros(hour);
     document.getElementById('min').innerHTML = minutes;
     document.getElementById('sec').style.display = 'none'; // thelei 'none' gia na to kaneis disable
-    document.getElementById('ampm').innerHTML = '';		// ki edw kaneis disable to am/pm
+    
 }
 
 
