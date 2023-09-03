@@ -17,16 +17,16 @@
 
         .widget {
             padding: 5px 5px ;
-            color: #3e2b1d;
+            color: #6b5037;
             display: flex;
             justify-content:center;
             align-items:center;
             flex-direction: column;
             max-width: 95%;
             margin: auto;
-            border: 3px solid #281604;
+            border: 3px solid #6b5037;
             border-radius: 5px;
-            box-shadow: 2px 2px 1px 0px #887060;
+            box-shadow: 2px 2px 1px 0px #453424;
 
         }
 
@@ -78,15 +78,10 @@
                     <div class="time" id="hour"></div>
                     <div class="colon">:</div>
                     <div class="time" id="min"></div>
-         
+                    <div class="time" id="ampm"></div>
                 </div>
-           
-
-        
-
     </div>
 </div>
-        
 
 
 
@@ -122,20 +117,16 @@ function dispalyGreetings(today){
 
 
     function dispalyClock(today) {
+    var hour = twelveHour(today.getHours());
+    var minutes = padZeros(today.getMinutes());
 
-        var hour = padZeros(twelveHour(today.getHours()));
-        var minutes = padZeros(today.getMinutes());
-       
-        if(today.getHours() >=12){
-            seconds+=" pm"
-        }
-        else{
-            seconds+=" am"
-        }
-       
-        document.getElementById('hour').innerHTML = hour;
-        document.getElementById('min').innerHTML = minutes;
-    }
+    document.getElementById('hour').innerHTML = padZeros(hour);
+    document.getElementById('min').innerHTML = minutes;
+    document.getElementById('sec').style.display = 'none'; // thelei 'none' gia na to kaneis disable
+    document.getElementById('ampm').innerHTML = '';		// ki edw kaneis disable to am/pm
+}
+
+
 
     function twelveHour(hour) {
         if (hour > 12) {
