@@ -26,7 +26,7 @@
             margin: auto;
             border: 3px solid #281604;
             border-radius: 5px;
-            box-shadow: 2px 2px 1px 0px #887060;
+            box-shadow: 2px 2px 1px 0px #bea493;
 
         }
 
@@ -119,6 +119,13 @@ function dispalyGreetings(today){
     function dispalyClock(today) {
     var hour = twelveHour(today.getHours());
     var minutes = padZeros(today.getMinutes());
+
+           if(today.getHours() >=12){
+            seconds+=" pm"
+        }
+        else{
+            seconds+=" am"
+        }
 
     document.getElementById('hour').innerHTML = padZeros(hour);
     document.getElementById('min').innerHTML = minutes;
